@@ -95,10 +95,9 @@ bindkey "^[[B" history-beginning-search-forward
 # Got these from .bashrc
 export PATH=$PATH:$HOME/Android/adt-bundle-mac-x86_64-20140321/sdk/platform-tools/:$HOME/Android/adt-bundle-mac-x86_64-20140321/sdk/tools/
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 export EDITOR='vim'             # needed by tmuxinator
@@ -113,5 +112,9 @@ compinit
 setopt interactivecomments
 
 # to enable ImageMagic so that we can run rspec tests for headliner
-#export PATH="$PATH:/opt/local/bin" # Add 'identify' utility from ImageMagic - MacBookPro
-export PATH="$PATH:/usr/local/bin" # Add 'identify' utility from ImageMagic - iMac
+if [ $HOST = 'hani-elabeds-iMac-2.local' ]; then
+  export PATH="$PATH:/usr/local/bin" # Add 'identify' utility from ImageMagic - iMac
+else
+  # macbookpro hostname is: 'hani-elabeds-MacBook-Pro.local'
+  export PATH="$PATH:/opt/local/bin" # Add 'identify' utility from ImageMagic - MacBookPro
+fi
