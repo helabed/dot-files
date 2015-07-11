@@ -122,6 +122,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+"Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'rking/vim-detailed'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -158,3 +160,5 @@ nnoremap <silent> <Leader>e :ZoomWin<CR>
 " ==================
 " ==================
 "
+"colorscheme PaperColor-Dark
+colorscheme detailed
