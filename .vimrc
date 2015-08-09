@@ -79,17 +79,17 @@ set laststatus=2
 :vnoremap p pgvy
 
 " set column margin at 120 chars, and line highlighting
-set colorcolumn=80
-set cul
+"set colorcolumn=80
+"set cul
 
 " doing colorcolumn an current line highlighting in the active pane
-augroup BgHighlight
-  autocmd!
-  autocmd WinEnter * set colorcolumn=80
-  autocmd WinLeave * set colorcolumn=0
-  autocmd WinEnter * set cul
-  autocmd WinLeave * set nocul
-augroup END
+"augroup BgHighlight
+"  autocmd!
+"  autocmd WinEnter * set colorcolumn=80
+"  autocmd WinLeave * set colorcolumn=0
+"  autocmd WinEnter * set cul
+"  autocmd WinLeave * set nocul
+"augroup END
 
 "
 " ==================
