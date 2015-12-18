@@ -50,7 +50,7 @@ ZSH_THEME="jonathan"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ruby rails osx sublime gem brew capistrano coffee compleat bundler vi-mode tmux)
+plugins=(git ruby rails osx sublime gem brew capistrano coffee compleat bundler vi-mode tmux history-substring-search)
 
 # User configuration
 
@@ -88,8 +88,13 @@ bindkey -v
 
 # command line history search after you start typing. this bound to Up and Down keys, for more info, see:
 # http://unix.stackexchange.com/questions/97843/how-can-i-search-history-with-what-is-already-entered-at-the-prompt-in-zsh
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
+# bindkey "^[[A" history-beginning-search-backward
+# bindkey "^[[B" history-beginning-search-forward
+# Dec. 18, 2015 - After a recent upgrade to oh-my-zsh, the above got broken and no longer works
+# so now using https://github.com/zsh-users/zsh-history-substring-search
+# added 'history-substring-search' to plugins=(...) above
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 #
 # Got these from .bashrc
