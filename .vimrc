@@ -1,8 +1,12 @@
 :syntax on
 " Formatting (some of these are for coding in C and C++)
+set autoread
+set wrap
+set list
 set ts=2  " Tabs are 2 spaces
 set bs=2  " Backspace over everything in insert mode
 set shiftwidth=2  " Tabs under smart indent
+set softtabstop=2
 set expandtab
 set nocp incsearch
 set showmatch   " Show matching brackets.
@@ -120,13 +124,25 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
+Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 "Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'rking/vim-detailed'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-haml'
+Plugin 'slim-template/vim-slim'
+Plugin 'puppetlabs/puppet-syntax-vim'
+Plugin 'tpope/vim-rails'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
+" vim +PluginInstall +qall
+" use above comand from command line to install new plugins,
+" was not successful running it from vim as follows
+" :PluginInstall
+
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -162,3 +178,15 @@ nnoremap <silent> <Leader>e :ZoomWin<CR>
 "
 "colorscheme PaperColor-Dark
 colorscheme detailed
+
+" Tidy xml and JSON
+" select xml text to format and hit ,x
+" be very careful, only XML text, no blanks, to extra lines
+" just select the XML
+vmap <leader>x :!tidy -q -i -xml<CR>
+" select json text to format and hit ,j
+vmap <leader>j  :!python -m json.tool<CR>
+" Yanks current file
+vmap <leader>n :let @+ = expand("%")<cr>
+" equivalent to a * (or shift 8) for more than one word
+vnoremap // y/<C-R>"<CR>
