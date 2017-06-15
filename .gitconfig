@@ -1,0 +1,14 @@
+[user]
+  email = hani.elabed@gmail.com
+  name = Hani Elabed
+[http]
+  sslVerify=false
+[color]
+  ui = auto
+[alias]
+  br = branch
+  ci = commit
+  co = checkout
+  me = merge
+  st = status
+
