@@ -7,10 +7,10 @@ export ZSH=~/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="gozilla"
-#ZSH_THEME="fino"
+ZSH_THEME="fino"
 #ZSH_THEME="takashiyoshida"
 #ZSH_THEME="random"
-ZSH_THEME="jonathan"
+#ZSH_THEME="jonathan"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -82,6 +82,7 @@ export PATH="$PATH:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias dc="docker-compose "
 
 # Vim binding for Zsh
 bindkey -v
